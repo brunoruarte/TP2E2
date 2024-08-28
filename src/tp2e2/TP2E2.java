@@ -1,20 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package tp2e2;
 
-/**
- *
- * @author bruno
- */
 public class TP2E2 {
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        Reloj reloj1 = new Reloj("Casio", "CA-53");
+        Persona persona1 = new Persona("Juan", "Perez", 25, reloj1);
+        
+        persona1.getReloj().verHora();
+        System.out.println("----------");
+        persona1.getReloj().cambiarHora();
+        System.out.println("----------");
+        persona1.getReloj().cambiarminutos();
+        System.out.println("----------");
+        
+        //persona1.getReloj().consultarModelo();
+                
     }
     
 }

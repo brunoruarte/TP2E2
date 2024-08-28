@@ -6,6 +6,7 @@ public class Persona {
     private String Apellido;
     private Integer edad;
     private Reloj reloj;
+    private Integer distancia = 0;
 
     public Persona(String Nombre, String Apellido, Integer edad, Reloj reloj) {
         this.Nombre = Nombre;
@@ -18,25 +19,13 @@ public class Persona {
         return Nombre;
     }
 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
-    }
-
     public String getApellido() {
         return Apellido;
     }
-
-    public void setApellido(String Apellido) {
-        this.Apellido = Apellido;
-    }
-
+  
     public Integer getEdad() {
         return edad;
-    }
-
-    public void setEdad(Integer edad) {
-        this.edad = edad;
-    }
+    }    
 
     public Reloj getReloj() {
         return reloj;
@@ -45,7 +34,22 @@ public class Persona {
     public void setReloj(Reloj reloj) {
         this.reloj = reloj;
     }
+
+   
+    public Integer getDistancia() {
+        return distancia;
+    }
+
+    public void setDistancia(Integer distancia) {
+        this.distancia = distancia;
+    }
     
+    public int caminar(int metros){
+        distancia = metros;
+        return distancia;
+    }    
     
-    
+    public void presentarse(){
+        System.out.println("Hola a todos, soy " + getNombre() + " " + getApellido() + ", tengo " + getEdad() + " y estoy usando un reloj " + getReloj());
+    }    
 }
