@@ -2,10 +2,10 @@ package tp2e2;
 
 public class Persona {
     
-    private String Nombre;
-    private String Apellido;
-    private Integer edad;
-    private Reloj reloj;
+    private final String Nombre;
+    private final String Apellido;
+    private final Integer edad;
+    private final Reloj reloj;
     private Integer distancia = 0;
 
     public Persona(String Nombre, String Apellido, Integer edad, Reloj reloj) {
@@ -31,11 +31,6 @@ public class Persona {
         return reloj;
     }
 
-    public void setReloj(Reloj reloj) {
-        this.reloj = reloj;
-    }
-
-   
     public Integer getDistancia() {
         return distancia;
     }
@@ -50,6 +45,7 @@ public class Persona {
     }    
     
     public void presentarse(){
-        System.out.println("Hola a todos, soy " + getNombre() + " " + getApellido() + ", tengo " + getEdad() + " y estoy usando un reloj " + getReloj());
+        System.out.println("Hola a todos, soy " + getNombre() + " " + getApellido() + ", tengo " + getEdad() + " años y estoy usando" + reloj.consultarModelo());
+        System.out.println("");
     }    
 }

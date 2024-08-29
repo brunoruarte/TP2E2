@@ -12,10 +12,14 @@ public class TP2E2 {
         System.out.println("----------");
         persona1.getReloj().cambiarHora();
         System.out.println("----------");
-        persona1.getReloj().cambiarminutos();
+        persona1.getReloj().cambiarMinutos();
         System.out.println("----------");
         
-        //persona1.getReloj().consultarModelo();
+        persona1.presentarse();
+        
+        persona1.getReloj().consultarModelo();
+        persona1.getReloj().cambiarFecha();
+
                 
     }
     
