@@ -21,27 +21,10 @@ public class Reloj {
     }   
     Scanner leer = new Scanner(System.in);    
 
-    public Integer getHora() {
-        return horas;
-    }
-
-    public void setHora(Integer hora) {
-        this.horas = hora;
-    }
-
-    public String getDia() {
-        return dia;
-    }
-
-    public void setDia(String dia) {
-        this.dia = dia;
-    }
-
     public String getMarca() {
         return marca;
     }
   
-
     public String getModelo() {
         return modelo;
     }
@@ -53,32 +36,26 @@ public class Reloj {
     
     public void cambiarHora(){
         System.out.println("Cada vez que apreta el botón, la hora se incrementará en 1 unidad.");       
-        System.out.print("La hora actual es: " + horas + ":" + minutos);
-        System.out.println(". ¿Cuantas veces oprimirá el botón?");
+        verHora();
+        System.out.println("¿Cuantas veces oprimirá el botón?");
         int cantidad = leer.nextInt();
         horas = horas + cantidad;
-        if (horas < 23) {
-            System.out.print("La hora actual es: " + horas + ":" + minutos);
-        } else {
+        if (horas > 24) {
             horas = horas%24;
-            System.out.print("La hora actual es: " + horas + ":" + minutos);
-        }
-        System.out.println("");         
+        } 
+        verHora();
     }
     
     public void cambiarMinutos(){
         System.out.println("Cada vez que apreta el botón, los minutos se incrementarán en 1 unidad.");       
-        System.out.print("La hora actual es: " + horas + ":" + minutos);
-        System.out.println(". ¿Cuantas veces oprimirá el botón?");
+        verHora();
+        System.out.println("¿Cuantas veces oprimirá el botón?");
         int cantidad = leer.nextInt();
         minutos = minutos + cantidad;
-        if (minutos < 60) {
-            System.out.print("La hora actual es: " + horas + ":" + minutos);
-        } else {
+        if (minutos > 60) {
             minutos = minutos%60;
-            System.out.print("La hora actual es: " + horas + ":" + minutos);
-        }
-        System.out.println("");         
+        } 
+        verHora();
     }
     
     public void verFecha(){
@@ -144,7 +121,7 @@ public class Reloj {
         verFecha();
         System.out.println("-----");
         System.out.println("-----");
-        }
+        }     
         
     public String consultarModelo(){
         return " un reloj marca " + getMarca() + " modelo " + getModelo();        
