@@ -30,49 +30,46 @@ public class Reloj {
     }
   
     public void verHora(){
-        System.out.print("La hora actual es: " + horas + ":" + minutos );
-        System.out.println("");
+        System.out.println("La hora actual es: " + horas + ":" + minutos);
+        System.out.println("-----");
     }
     
     public void cambiarHora(){
-        System.out.println("Cada vez que apreta el botón, la hora se incrementará en 1 unidad.");       
-        verHora();
+         //para cambiar la hora
+        System.out.print("Cada vez que apreta el botón, la hora se incrementará en 1 unidad. "); 
         System.out.println("¿Cuantas veces oprimirá el botón?");
         int cantidad = leer.nextInt();
         horas = horas + cantidad;
         if (horas > 24) { //Reinicio si supera la hora máxima
-            horas = horas%24;
+            horas = horas%24;            
         } 
-        verHora();
-    }
-    
-    public void cambiarMinutos(){
-        System.out.println("Cada vez que apreta el botón, los minutos se incrementarán en 1 unidad.");       
-        verHora();
+        //para cambiar los minutos
+        System.out.print("Cada vez que apreta el botón, los minutos se incrementarán en 1 unidad. ");       
         System.out.println("¿Cuantas veces oprimirá el botón?");
-        int cantidad = leer.nextInt();
+        cantidad = leer.nextInt();
         minutos = minutos + cantidad;
         if (minutos > 60) { //Reinicio si supera los minutos máximos
             minutos = minutos%60;
         } 
-        verHora();
+        System.out.println("La nueva hora es: " + horas + ":" + minutos);
+        System.out.println("-----");
     }
-    
+      
     public void verFecha(){
         System.out.println("La fecha actual es: " + dia + "/" + mes + "/" + año);
+        System.out.println("-----");
     }
     
     public void cambiarFecha(){
-        verFecha();
+
         int min = 1900;
         int max = 2100;
-        
-        System.out.println("-----");
+        //para cambiar el año
         System.out.println("El año actual es:" + año);
-        System.out.println("Oprima para incrementa el año.");
+        System.out.print("Oprima para incrementa el año. ");
+        System.out.println("¿Cuantas veces oprimirá el botón?");
         System.out.println("Año minimo: " + min);
         System.out.println("Año máximo: " + max);   
-        System.out.println("¿Cuantas veces oprimirá el botón?");
 
         int cantidad = leer.nextInt();
         año = año + cantidad;
@@ -80,16 +77,16 @@ public class Reloj {
             año = año-200;                       
         }
         System.out.println("El nuevo año es:" + año);
-        System.out.println("-----");
         
+        //para cambiar el mes
         min = 1;
         max = 12;
         System.out.println("-----");
         System.out.println("El mes actual es:" + mes);  
-        System.out.println("Oprima para incrementa el mes.");
+        System.out.print("Oprima para incrementa el mes. ");
+        System.out.println("¿Cuantas veces oprimirá el botón?");
         System.out.println("Mes minimo: " + min);
         System.out.println("Mes máximo: " + max);   
-        System.out.println("¿Cuantas veces oprimirá el botón?");
 
         cantidad = leer.nextInt();
         mes = mes + cantidad;
@@ -97,8 +94,8 @@ public class Reloj {
             mes = mes%max;                       
         }
         System.out.println("El nuevo mes es:" + mes);
-        System.out.println("-----");
         
+        //para cambiar el día
         switch (mes) {
             case 1, 3, 5, 7, 8, 10, 12 -> max = 31;
             case 2 -> max = 28;
@@ -106,24 +103,22 @@ public class Reloj {
         }            
         System.out.println("-----");
         System.out.println("El día actual es:" + dia);        
-        System.out.println("Oprima para incrementa el día.");
-        System.out.println("Dia máximo para el mes: " + max);  
+        System.out.print("Oprima para incrementa el día. ");
         System.out.println("¿Cuantas veces oprimirá el botón?");
+        System.out.println("Dia máximo para el mes: " + max);  
 
         cantidad = leer.nextInt();
         dia = dia + cantidad;
-        if (dia>max) { //Reinicio si supera di}áa el máximo
+        if (dia>max) { //Reinicio si supera día el máximo
             dia = dia%max;                       
         }
         System.out.println("El nuevo dia es:" + dia);
         System.out.println("-----");
-        System.out.println("-----");
-        verFecha();
-        System.out.println("-----");
+        System.out.println("La nueva fecha es: " + dia + "/" + mes + "/" + año);
         System.out.println("-----");
         }     
         
     public String consultarModelo(){
-        return " un reloj marca " + getMarca() + " modelo " + getModelo();        
+        return " un reloj marca " + getMarca() + " modelo " + getModelo(); 
     }     
 }

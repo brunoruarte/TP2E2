@@ -4,21 +4,20 @@ import java.util.Random;
 
 public class RelojFit extends Reloj{
     
-    private Integer pasos= 0;
-    private Boolean frecuencia = false;
+    private int pasos= 0;
+    private int frecuencia;
 
     public RelojFit(String marca, String modelo) {
         super(marca, modelo);
     }     
-    public void cuentaPasos(int x,int y){ // AGREGO METODO
-       int r=x+y;
-        System.out.println("Pasos realizados:  "+ r);
+    public int cuentaPasos(int x){ // AGREGO METODO         ;
+        pasos = (int) (x*1.3);//1.3 pasos por metro avanzado
+        return pasos;
        
     }
     public void frecuenciaAleatoria(){ // AGREGO METODO
-    Random random = new Random();
-    int latidos= random.nextInt(140 - 60 + 1) + 60; 
-        System.out.println("Frecuencia por minuto:  "+ latidos);
-    
+        Random random = new Random();
+        frecuencia= random.nextInt(140 - 60 + 1) + 60; 
+        System.out.println("Frecuencia por minuto:  "+ frecuencia);   
     }
 }
