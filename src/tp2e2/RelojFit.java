@@ -12,12 +12,12 @@ public class RelojFit extends Reloj{
     }     
     public int cuentaPasos(int x){ // AGREGO METODO         ;
         pasos = (int) (x*1.3);//1.3 pasos por metro avanzado
-        return pasos;
-       
+        return pasos;       
     }
-    public void frecuenciaAleatoria(){ // AGREGO METODO
+    
+    public int frecuenciaAleatoria(){ // AGREGO METODO
         Random random = new Random();
         frecuencia= random.nextInt(140 - 60 + 1) + 60; 
-        System.out.println("Frecuencia por minuto:  "+ frecuencia);   
+        return frecuencia;   
     }
 }

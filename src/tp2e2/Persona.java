@@ -67,6 +67,15 @@ public class Persona {
         }
     }
     
+    public void verFrecuencia(){
+        if (reloj instanceof RelojFit) {//si el reloj que uso es fit...
+            RelojFit relojfit = (RelojFit) reloj;//casteo a RelojFit...
+            System.out.println("Su frecuencia cardíaca es: " + relojfit.frecuenciaAleatoria() + " PPM.");//y muestro la frecuencia            
+        } else {
+            System.out.println("EL reloj actual no soporta la funcion de ver la frecuencia cardíaca.");//si no es fit, no puedo mostrar pasos
+        }
+    }
+    
     public void comer() {
         System.out.println("Me estoy comiendo un sanguchito ");//ñam ñam ñam
     } // AGREGO METODO

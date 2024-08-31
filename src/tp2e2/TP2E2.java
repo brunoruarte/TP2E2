@@ -23,6 +23,7 @@ public class TP2E2 {
         persona1.caminar(distancia);
         System.out.println(persona1.getNombre() + " caminó " + distancia + " metros.");
         persona1.verPasos();  
+        persona1.verFrecuencia();
         System.out.println("-----");
 
         //Test con reloj2 clase RelojFit       
@@ -32,7 +33,8 @@ public class TP2E2 {
         distancia = leer.nextInt();        
         persona1.caminar(distancia);
         System.out.println(persona1.getNombre() + " caminó " + distancia + " metros.");
-        persona1.verPasos();  
+        persona1.verPasos();
+        persona1.verFrecuencia();
         System.out.println("-----");
     }    
 }
