@@ -76,7 +76,7 @@ public class Reloj {
 
         int cantidad = leer.nextInt();
         año = año + cantidad;
-        if (año+cantidad>max) {
+        if (año>max) {
             año = año-200;                       
         }
         System.out.println("El nuevo año es:" + año);
@@ -93,7 +93,7 @@ public class Reloj {
 
         cantidad = leer.nextInt();
         mes = mes + cantidad;
-        if (mes+cantidad>max) {
+        if (mes>max) {
             mes = mes%max;                       
         }
         System.out.println("El nuevo mes es:" + mes);
@@ -112,7 +112,7 @@ public class Reloj {
 
         cantidad = leer.nextInt();
         dia = dia + cantidad;
-        if (dia+cantidad>max) {
+        if (dia>max) {
             dia = dia%max;                       
         }
         System.out.println("El nuevo dia es:" + dia);
