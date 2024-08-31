@@ -42,7 +42,10 @@ public class Persona {
     public int caminar(int metros){
         distancia = metros;
         return distancia;
-    }    
+    }
+    public void comer() {
+        System.out.println("Me estoy comiendo un sanguchito ");
+    } // AGREGO METODO
     
     public void presentarse(){
         System.out.println("Hola a todos, soy " + getNombre() + " " + getApellido() + ", tengo " + getEdad() + " años y estoy usando" + reloj.consultarModelo());
