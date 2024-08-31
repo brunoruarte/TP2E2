@@ -5,17 +5,17 @@ import java.time.LocalTime;
 import java.time.LocalDate;
 
 public class Reloj {
-    private final LocalTime ahora = LocalTime.now(); 
-    private final LocalDate hoy = LocalDate.now(); 
-    private Integer horas = ahora.getHour();
-    private Integer minutos = ahora.getMinute();
-    private Integer dia = hoy.getDayOfMonth();
-    private Integer mes = hoy.getMonthValue();
-    private Integer año = hoy.getYear();
+    private final LocalTime ahora = LocalTime.now(); //Hora actual PC
+    private final LocalDate hoy = LocalDate.now(); //Fecha actual PC
+    private Integer horas = ahora.getHour(); //capturo la hora
+    private Integer minutos = ahora.getMinute(); //capturo los minutos
+    private Integer dia = hoy.getDayOfMonth(); //capturo el día
+    private Integer mes = hoy.getMonthValue(); //capturo el mes
+    private Integer año = hoy.getYear(); //capturo el año
     private final String marca;
     private final String modelo;
     
-    public Reloj(String marca, String modelo) {
+    public Reloj(String marca, String modelo) { //solo necesito marca y modelo para iniciarse, los demas los datos los crea solo
         this.marca = marca;
         this.modelo = modelo;
     }   
@@ -40,7 +40,7 @@ public class Reloj {
         System.out.println("¿Cuantas veces oprimirá el botón?");
         int cantidad = leer.nextInt();
         horas = horas + cantidad;
-        if (horas > 24) {
+        if (horas > 24) { //Reinicio si supera la hora máxima
             horas = horas%24;
         } 
         verHora();
@@ -52,7 +52,7 @@ public class Reloj {
         System.out.println("¿Cuantas veces oprimirá el botón?");
         int cantidad = leer.nextInt();
         minutos = minutos + cantidad;
-        if (minutos > 60) {
+        if (minutos > 60) { //Reinicio si supera los minutos máximos
             minutos = minutos%60;
         } 
         verHora();
@@ -76,7 +76,7 @@ public class Reloj {
 
         int cantidad = leer.nextInt();
         año = año + cantidad;
-        if (año>max) {
+        if (año>max) { //Reinicio si supera el año máximo
             año = año-200;                       
         }
         System.out.println("El nuevo año es:" + año);
@@ -93,7 +93,7 @@ public class Reloj {
 
         cantidad = leer.nextInt();
         mes = mes + cantidad;
-        if (mes>max) {
+        if (mes>max) { //Reinicio si supera el mes máximo
             mes = mes%max;                       
         }
         System.out.println("El nuevo mes es:" + mes);
@@ -112,7 +112,7 @@ public class Reloj {
 
         cantidad = leer.nextInt();
         dia = dia + cantidad;
-        if (dia>max) {
+        if (dia>max) { //Reinicio si supera di}áa el máximo
             dia = dia%max;                       
         }
         System.out.println("El nuevo dia es:" + dia);
