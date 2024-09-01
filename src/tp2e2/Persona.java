@@ -2,23 +2,23 @@ package tp2e2;
 
 public class Persona {
     
-    private String Nombre;
-    private String Apellido;
+    private final String nombre;
+    private final String apellido;
     private Reloj reloj;
     private Integer distancia = 0;
 
-    public Persona(String Nombre, String Apellido, Reloj reloj) {
-        this.Nombre = Nombre;
-        this.Apellido = Apellido;
+    public Persona(String nombre, String apellido, Reloj reloj) {
+        this.nombre = nombre;
+        this.apellido = apellido;
         this.reloj = reloj;
     }
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
     public String getApellido() {
-        return Apellido;
+        return apellido;
     }
 
     public Reloj getReloj() {

@@ -4,16 +4,12 @@ import java.util.Scanner;
 import java.time.LocalTime;
 import java.time.LocalDate;
 
-public class Reloj {
-    private final LocalTime ahora = LocalTime.now(); //Hora actual PC
-    private final LocalDate hoy = LocalDate.now(); //Fecha actual PC
-    
-    private Integer horas = ahora.getHour(); //capturo la hora
-    private Integer minutos = ahora.getMinute(); //capturo los minutos
-    private Integer dia = hoy.getDayOfMonth(); //capturo el día
-    private Integer mes = hoy.getMonthValue(); //capturo el mes
-    private Integer año = hoy.getYear(); //capturo el año
-    
+public class Reloj {    
+    private Integer horas = LocalTime.now().getHour(); //capturo la hora
+    private Integer minutos = LocalTime.now().getMinute(); //capturo los minutos
+    private Integer dia = LocalDate.now().getDayOfMonth(); //capturo el día
+    private Integer mes = LocalDate.now().getMonthValue(); //capturo el mes
+    private Integer año = LocalDate.now().getYear(); //capturo el año    
     private final String marca;
     private final String modelo;
     
